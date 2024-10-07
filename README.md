@@ -35,6 +35,20 @@ docker-compose up -d
 http://localhost:3000/api/v2/seed
 
 ```
+
+
+# Production Build
+1. Crear el archivo __.env.prod__ 
+
+2. Llenar las variables de entorno para prod.
+
+3. Construir la nueva imagen imagen
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+https://gist.github.com/Klerith/e7861738c93712840ab3a38674843490
+
 ## Stack usado
 * MongoDB
 * Nest
